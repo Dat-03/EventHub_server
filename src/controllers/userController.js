@@ -2,6 +2,7 @@
 
 const asyncHandle = require('express-async-handler');
 const UserModel = require('../models/userModel');
+const EventModel = require('../models/eventModel');
 const { JWT } = require('google-auth-library');
 
 const nodemailer = require('nodemailer');

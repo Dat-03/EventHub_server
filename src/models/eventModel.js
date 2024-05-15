@@ -2,7 +2,7 @@
 
 const { default: mongoose } = require('mongoose');
 
-const PartySchema = new mongoose.Schema({
+const EventSchema = new mongoose.Schema({
 	title: {
 		type: String,
 		required: true,
@@ -51,7 +51,7 @@ const PartySchema = new mongoose.Schema({
 		type: Number,
 		required: true,
 	},
-	categories: {
+	category: {
 		type: String,
 		required: true,
 	},
@@ -67,10 +67,10 @@ const PartySchema = new mongoose.Schema({
 		type: Date,
 		default: Date.now(),
 	},
-	followers: {
-		type: [String],
-	},
+	// followers: {
+	// 	type: [String],
+	// },
 });
 
-const PartyModel = mongoose.model('partys', PartySchema);
-module.exports = PartyModel;
+const EventModel = mongoose.model('events', EventSchema);
+module.exports = EventModel;
